@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <title>QUICK BITES</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <!-- navbar  -->
+  
+    <nav class="navbar navbar-expand-lg px-4">
+      <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNav">
+        <ul class="navbar-nav mx-auto text-capitalize">
+          <li class="nav-item active">
+            <a class="nav-link"  href="#" >home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onClick="document.getElementById('modal-wrapper1').style.display='block'">Contact us</a>
+            <div id="modal-wrapper1" class="modal" style="margin:200px 500px 0 500px;">
+            	<form class="modal-content animate" action="css/style.css">
+                <div class="imgcontainer1">
+                	<span onClick="document.getElementById('modal-wrapper1').style.display='none'" class="close" title="close PopUp">&times;</span>
+                 </div>
+                 <div style="margin-bottom:20px;">
+                 <center>
+Name<br>
+<input type="text" name="uname" class="input" placeholder="Name"><br>
+Contact No.<br>
+<input type="text" name="ucno" class="input" placeholder="Contact No"><br>
+Email<br>
+<input type="email" name="uemail" class="input" placeholder="Email"><br>
+Message<br>
+<textarea name="uaddress" class="textarea" placeholder="Address"></textarea><br><br>
+<input type="submit" name="submit" value="Submit" class="submit">
+<input type="reset" name="reset" value="Reset" class="submit">
+
+</center>
+</div>
+</form>
+             </div>
+          </li>
+        </ul>
+        <div class="nav-info-items d-none d-lg-flex ">
+          <!-- single info -->
+          <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+            <span class="info-icon mx-lg-3"><i class="fas fa-phone"></i></span>
+            <p class="mb-0">+91 8789847232</p>
+          </div>
+          <!-- end of single info -->
+		   <ul class="navbar-nav mx-auto text-capitalize">
+		   <li class="nav-item">
+            <a class="nav-link" href="#" onClick="document.getElementById('modal-wrapper').style.display='block'">Sign In</a>
+            <div id="modal-wrapper" class="modal">
+            	<form class="modal-content animate" action="css/style.css">
+                <div class="imgcontainer">
+                	<span onClick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="close PopUp">&times;</span>
+                 </div>
+                 <div class="container">
+                 	<input type="text" placeholder="Enter Username" name="uname">
+                    <input type="password" placeholder="Enter Password" name="psw">
+                    <button type="submit">Login</button>
+                    <input type="checkbox" style="margin:26px 30px;"> Remember me
+                    <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+                 </div>
+                 </form>
+            </div>
+          </li>
+          
+		  <li class="nav-item">
+            <a class="nav-link" href="#" onClick="document.getElementById('modal-wrapper2').style.display='block'">Sign up</a>
+            <div id="modal-wrapper2" class="modal" style="margin:170px 500px 0 500px;">
+            	<script>
+		  	function myfun()
+			{
+				var a=document.getElementById('password').value;
+				var b=document.getElementById('passwords').value;
+				if(a=="")
+				{
+					document.getElementById("message").innerHTML="** Please fill password";
+					return false;
+				}
+				if(a.length < 5)
+				{
+					document.getElementById("message").innerHTML="**Must be > 5";
+					return false;
+				}
+				if(a!=b)
+				{
+					document.getElementById("messages").innerHTML="** Password are not same";
+					
+					return false;
+				}
+			}
+			</script>
+                <form class="modal-content animate" id="f" action="css/style.css" onSubmit="return myfun()" >
+                <div class="imgcontainer2">
+                	<span onClick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="close PopUp">&times;</span>
+                 </div>
+                 <div style="margin-bottom:40px;">
+                 <center>
+                 
+Name<br>
+<input type="text" name="uname" class="input" placeholder="Name"><br>
+Contact No.<br>
+<input type="text" name="ucno" class="input" placeholder="Contact No"><br>
+Email<br>
+<input type="email" name="uemail" class="input" placeholder="Email"><br>
+Password<br>
+<input type="password" placeholder="Enter Password" name="psw" id="password"><br>
+<span id="message" style="color:#F00;"></span><br>
+Confirm Password<br>
+<input type="password" placeholder="Confirm Password" name="psw" id="passwords"><br>
+<span id="messages" style="color:#F00;"></span><br><br>
+<input type="submit" name="submit" value="Submit" class="submit">
+<input type="reset" name="reset" value="Reset" class="submit">
+
+</center>
+</div>
+</form>
+             </div>
+          </li>
+		  </ul>
+          <!-- single info -->
+          <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+            <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+            <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - ₹<span class="item-total">0</span></p>
+          </div>
+          <!-- end of single info -->
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- banner  -->
+	
+    <div class="container-fluid">
+      <div class="row max-height justify-content-center align-items-center">
+        <div class="col-10 mx-auto banner text-center">
+          <h1 class="text-capitalize">welcome to <strong class="banner-title ">QUICK BITES</strong></h1>
+		   
+		   
+		 
+          <a href="#store" class="btn banner-link text-uppercase my-2">OUR MENU</a>
+
+        </div>
+        <div id="cart" class="cart">
+          
+          <!-- cart total -->
+          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> ₹ <strong id="cart-total" class="font-weight-bold">0.00</strong> </h5>
+          </div>
+          <!--end cart total -->
+          <!-- cart buttons -->
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="index.html" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+          </div>
+          <!--end of  cart buttons -->
+          <!--  -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!--end of  banner  -->
+  </header>
+  <!-- header -->
+  <!-- about us -->
+  <section class="about py-5" id="about">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-10 mx-auto col-md-6 my-5">
+          <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+          <p class="my-4 text-muted w-75">Our team gathers information from every restaurant on a regular basis to ensure our data is fresh.
+		  Our vast community of food lovers share their reviews and photos, so you have all that you need to make an informed choice.
+		  With dedicated engagement and management tools, we're enabling restaurants to spend more time focusing on food itself,
+		  which translates directly to better dining experiences.</p>
+          <a href="#" class="btn btn-outline-secondary btn-black text-uppercase ">Contact Us</a>
+
+        </div>
+        <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+          <div class="about-img__container">
+            <img src="img/1.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end of about us -->
+
+
+  <!-- store -->
+  <section id="store" class="store py-5">
+    <div class="container">
+      <!-- section title -->
+      <div class="row">
+        <div class="col-10 mx-auto col-sm-6 text-center">
+          <h1 class="text-capitalize">our <strong class="banner-title ">MENU</strong></h1>
+        </div>
+      </div>
+      <!-- end of section title -->
+      <!--filter buttons -->
+      <div class="row">
+        <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2  sortBtn ">
+          <a href="#menu-head-1" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="All-In-1-Meals">All-In-1-Meals</a>
+          <a href="#menu-head-2" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Fusion Box">Fusion Box</a>
+          <a href="#menu-head-3" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Salads">Salads</a>
+          <a href="#menu-head-4" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Wraps">Wraps</a>
+          <a href="#menu-head-5" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Sandwiches">Sandwiches</a>
+		  <a href="#menu-head-6" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="Dessert & Drinks">Dessert & Drinks</a>
+        </div>
+      </div>      
+      <!--end of filter buttons -->
+      
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-1">All-In-1-Meals</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Butter Chicken Meal" data-item="Butter Chicken Meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/Butter Chicken Meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Butter Chicken Meal</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">150</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Mushrooms & Spinach Meal" data-item="Mushrooms & Spinach Meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/Mushrooms & Spinach Meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Mushrooms & Spinach Meal</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">105</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Palak Paneer Meal" data-item="Palak Paneer Meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/Palak Paneer Meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Palak Paneer Meal</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		
+	
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item dal makhni meal" data-item="dal makhni meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/dal makhni meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">dal makhni meal</h5>
+                <h5 class="store-item-value">₹  <strong id="store-item-price" class="font-weight-bold">165</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Chicken Masala Meal" data-item="Chicken Masala Meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/Chicken Masala Meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Chicken Masala Meal</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">160</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Paneer Makhni Meal" data-item="Paneer Makhni Meal">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/All In 1/Paneer Makhni Meal.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Makhni Meal</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">170</strong></h5>
+              </div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+
+	  
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-2">Fusion Box</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Amritsari Chole Chawal Box" data-item="Amritsari Chole Chawal Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Amritsari Chole Chawal Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Amritsari Chole Chawal Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Dal Makhni Rice Box" data-item="Dal Makhni Rice Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Dal Makhni Rice Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Dal Makhni Rice Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Paneer Makhni Box" data-item="Paneer Makhni Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Paneer Makhni Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Paneer Makhni Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		<!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Butter Chicken Box" data-item="Butter Chicken Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Butter Chicken Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Butter Chicken Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Roast Chicken & Curry Box" data-item="Roast Chicken & Curry Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Roast Chicken & Curry Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Roast Chicken & Curry Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Spicy Kebab Box" data-item="Spicy Kebab Box">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/FUSION BOX/Spicy Kebab Box.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Spicy Kebab Box</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		
+		
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-3">Salads</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Paneer Tossed Salad" data-item="Paneer Tossed Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Paneer Tossed Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Paneer Tossed Salad</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Superfit Paneer Salad" data-item="Superfit Paneer Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Superfit Paneer Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Superfit Paneer Salad</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Farmer's Market Salad" data-item="Farmer's Market Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Farmer's Market Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Farmer's Market Salad</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->	
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Char-Grilled Chicken Salad" data-item="Char-Grilled Chicken Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Char-Grilled Chicken Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Char-Grilled Chicken Salad</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Superfit Chicken Salad" data-item="Superfit Chicken Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Superfit Chicken Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Superfit Chicken Salad</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		<!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Herbed Chicken Salad" data-item="Herbed Chicken Salad">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SALADS/Herbed Chicken Salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Herbed Chicken Salad</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+
+
+
+
+
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-4">Wraps</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Veggie Patty Wrap" data-item="Veggie Patty Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Veggie Patty Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Veggie Patty Wrap</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Mayo Tikki Wrap" data-item="Mayo Tikki Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Mayo Tikki Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Mayo Tikki Wrap</h5>
+                <h5 class="store-item-value">₹ <strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Farm Fresh Wrap" data-item="Farm Fresh Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Farm Fresh Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Farm Fresh Wrap</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->			
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Chicken Mayo Wrap" data-item="Chicken Mayo Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Chicken Mayo Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Chicken Mayo Wrap</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Chicken Tikka Wrap" data-item="Chicken Tikka Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Chicken Tikka Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Chicken Tikka Wrap</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Roasted Chicken Wrap" data-item="Roasted Chicken Wrap">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/WRAPS/Roasted Chicken Wrap.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Roasted Chicken Wrap</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+              </div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+
+
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-5">Sandwiches</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Fiery Paneer Sandwich" data-item="Fiery Paneer Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Fiery Paneer Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Fiery Paneer Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Paneer Overload Sandwich" data-item="Paneer Overload Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Paneer Overload Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Paneer Overload Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+              </div>
+            </div>
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Paneer Tikka Sandwich" data-item="Paneer Tikka Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Paneer Tikka Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Paneer Tikka Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		
+	
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Chicken Seekh Kebab Sandwich" data-item="Chicken Seekh Kebab Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Chicken Seekh Kebab Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Chicken Seekh Kebab Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Grilled Chicken Sandwich" data-item="Grilled Chicken Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Grilled Chicken Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Grilled Chicken Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Tandoori Chicken Sandwich" data-item="Tandoori Chicken Sandwich">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/SANDWICH/Tandoori Chicken Sandwich.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Tandoori Chicken Sandwich</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+
+              </div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+
+
+
+<!-- Menu Heads-->
+	  <h4><strong class="menu-head" id="menu-head-6">Dessert & Drinks</strong></h4>
+	  <!-- store  items-->
+      <div class="row" class="store-items" id="store-items">
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Aamras" data-item="Aamras">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Aamras.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Aamras</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Choco Lava Cake" data-item="Choco Lava Cake">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Choco Lava Cake.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Choco Lava Cake</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Drinks [Pack of 2]" data-item="Drinks [Pack of 2]">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Drinks [Pack of 2].jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Drinks [Pack of 2]</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+		</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+		
+	
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Gharwala Gajar Halwa" data-item="Gharwala Gajar Halwa">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Gharwala Gajar Halwa.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Gharwala Gajar Halwa</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">5</strong></h5>
+
+              </div>
+            </div>
+		</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Ice Tea" data-item="Ice Tea">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Ice Tea.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Ice Tea</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+
+              </div>
+            </div>
+		</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item Masala Lemonade" data-item="Masala Lemonade">
+          <div class="card ">
+            <div class="img-container">
+              <img src="img/Desserts & Drinks/Masala Lemonade.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="card-text d-flex justify-content-between text-capitalize">
+                <h5 id="store-item-name">Masala Lemonade</h5>
+                <h5 class="store-item-value">₹<strong id="store-item-price" class="font-weight-bold">10</strong></h5>
+			</div>
+            </div>
+			</div>
+          <!-- end of card-->
+        </div>
+        <!--end of single store item-->
+      </div>
+  </section>
+
+  <!--end of store items -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  <!-- modal-container -->
+  <div class="container-fluid ">
+    <div class="row lightbox-container align-items-center">
+      <div class="col-10 col-md-10 mx-auto text-right lightbox-holder">
+        <span class="lightbox-close"><i class="fas fa-window-close"></i></span>
+        <div class="lightbox-item"></div>
+        <span class="lightbox-control btnLeft"><i class="fas fa-caret-left"></i></span>
+        <span class="lightbox-control btnRight"><i class="fas fa-caret-right"></i></span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- jquery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
